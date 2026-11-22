@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <radialGradient id="sh" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#000" stop-opacity=".6"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="tread" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9c9588"/>
+      <stop offset=".55" stop-color="#6e685d"/>
+      <stop offset="1" stop-color="#544e45"/>
+    </linearGradient>
+    <linearGradient id="riser" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#49433b"/>
+      <stop offset="1" stop-color="#221e19"/>
+    </linearGradient>
+    <linearGradient id="wall" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6a6459"/>
+      <stop offset=".5" stop-color="#4a453d"/>
+      <stop offset="1" stop-color="#2e2a24"/>
+    </linearGradient>
+    <linearGradient id="wallR" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2e2a24"/>
+      <stop offset=".5" stop-color="#4a453d"/>
+      <stop offset="1" stop-color="#6a6459"/>
+    </linearGradient>
+    <radialGradient id="void" cx="50%" cy="35%" r="70%">
+      <stop offset="0" stop-color="#000"/>
+      <stop offset="1" stop-color="#150f0b"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#ffb347" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#ff8c1a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <ellipse cx="60" cy="110" rx="50" ry="11" fill="url(#sh)"/>
+
+  <!-- flanking stone walls -->
+  <path d="M26 46 L14 106 L30 106 L40 48 Z" fill="url(#wall)"/>
+  <path d="M94 46 L106 106 L90 106 L80 48 Z" fill="url(#wallR)"/>
+  <path d="M40 48 L38 106 M80 48 L82 106" stroke="#1b1712" stroke-width="1.2" opacity=".6" fill="none"/>
+  <!-- wall block seams -->
+  <path d="M28 62 L37 61 M24 78 L34 77 M21 94 L31 93 M92 62 L83 61 M96 78 L86 77 M99 94 L89 93" stroke="#201b16" stroke-width="1" opacity=".5"/>
+
+  <!-- doorway arch -->
+  <path d="M38 50 L38 32 A22 22 0 0 1 82 32 L82 50 Z" fill="url(#wall)"/>
+  <path d="M45 50 L45 33 A15 15 0 0 1 75 33 L75 50 Z" fill="url(#void)"/>
+  <path d="M45 33 A15 15 0 0 1 75 33" stroke="#857d70" stroke-width="1.4" fill="none" opacity=".55"/>
+
+  <!-- torches flanking the arch -->
+  <circle cx="35" cy="44" r="9" fill="url(#glow)"/>
+  <circle cx="85" cy="44" r="9" fill="url(#glow)"/>
+  <path d="M35 46 L35 40 M85 46 L85 40" stroke="#3a2a14" stroke-width="2" stroke-linecap="round"/>
+  <path d="M35 41 Q31 37 35 32 Q39 37 35 41 Z" fill="#ffb347"/>
+  <path d="M35 40 Q33 37 35 34 Q37 37 35 40 Z" fill="#ffe08a"/>
+  <path d="M85 41 Q81 37 85 32 Q89 37 85 41 Z" fill="#ffb347"/>
+  <path d="M85 40 Q83 37 85 34 Q87 37 85 40 Z" fill="#ffe08a"/>
+
+  <!-- descending stone steps -->
+  <g stroke="#241f19" stroke-width="1">
+    <path d="M40 50 L80 50 L84 56 L36 56 Z" fill="url(#tread)"/>
+    <path d="M36 56 L84 56 L84 62 L36 62 Z" fill="url(#riser)"/>
+    <path d="M36 62 L84 62 L89 69 L31 69 Z" fill="url(#tread)"/>
+    <path d="M31 69 L89 69 L89 75 L31 75 Z" fill="url(#riser)"/>
+    <path d="M31 75 L89 75 L94 83 L26 83 Z" fill="url(#tread)"/>
+    <path d="M26 83 L94 83 L94 89 L26 89 Z" fill="url(#riser)"/>
+    <path d="M26 89 L94 89 L100 98 L20 98 Z" fill="url(#tread)"/>
+    <path d="M20 98 L100 98 L100 105 L20 105 Z" fill="url(#riser)"/>
+    <path d="M20 105 L100 105 L106 113 L14 113 Z" fill="url(#tread)"/>
+  </g>
+  <!-- tread top highlights -->
+  <g stroke="#b9b1a2" stroke-width="1" opacity=".45" fill="none">
+    <path d="M37 56 L83 56"/><path d="M32 69 L88 69"/><path d="M27 83 L93 83"/><path d="M21 98 L99 98"/>
+  </g>
+  <!-- cracks -->
+  <g stroke="#2b2620" stroke-width=".9" opacity=".5" fill="none">
+    <path d="M55 51 L57 55 L54 56"/>
+    <path d="M48 64 L50 67 L47 69"/>
+    <path d="M70 77 L68 81 L72 83"/>
+    <path d="M40 91 L43 96 L39 98"/>
+  </g>
+</svg>

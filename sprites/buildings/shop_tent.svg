@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <radialGradient id="sh" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#000" stop-opacity=".62"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="front" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9a4434"/>
+      <stop offset=".42" stop-color="#66231a"/>
+      <stop offset="1" stop-color="#2d0e0a"/>
+    </linearGradient>
+    <linearGradient id="side" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#66271d"/>
+      <stop offset=".5" stop-color="#3b110c"/>
+      <stop offset="1" stop-color="#1a0705"/>
+    </linearGradient>
+    <linearGradient id="door" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#160909"/>
+      <stop offset="1" stop-color="#000000"/>
+    </linearGradient>
+    <linearGradient id="wood" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7a5630"/>
+      <stop offset=".5" stop-color="#4a3018"/>
+      <stop offset="1" stop-color="#271708"/>
+    </linearGradient>
+    <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e6c879"/>
+      <stop offset=".5" stop-color="#a17c30"/>
+      <stop offset="1" stop-color="#5e4315"/>
+    </linearGradient>
+    <linearGradient id="flapL" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8c3324"/>
+      <stop offset="1" stop-color="#4c1810"/>
+    </linearGradient>
+  </defs>
+
+  <ellipse cx="60" cy="102" rx="47" ry="13" fill="url(#sh)"/>
+
+  <!-- back support poles -->
+  <line x1="58" y1="20" x2="14" y2="88" stroke="url(#wood)" stroke-width="4" stroke-linecap="round"/>
+  <line x1="58" y1="20" x2="102" y2="88" stroke="url(#wood)" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- tent canvas faces -->
+  <path d="M58 22 L14 88 L58 106 Z" fill="url(#front)"/>
+  <path d="M58 22 L58 106 L102 88 Z" fill="url(#side)"/>
+
+  <!-- fold / seam shading -->
+  <path d="M50 42 L28 86 M44 60 L34 94" stroke="#250b07" stroke-width="1.4" opacity=".5" fill="none"/>
+  <path d="M58 30 L20 86" stroke="#c2624a" stroke-width="1.1" opacity=".3" fill="none"/>
+  <path d="M66 40 L88 86 M72 58 L94 86" stroke="#140503" stroke-width="1.4" opacity=".55" fill="none"/>
+
+  <!-- dark entrance -->
+  <path d="M49 58 Q44 78 37 98 Q48 104 58 106 Q56 80 49 58 Z" fill="url(#door)"/>
+  <!-- door flaps pulled aside -->
+  <path d="M49 58 Q44 78 37 98 L44 100 Q50 78 53 60 Z" fill="url(#flapL)"/>
+  <path d="M49 58 Q56 80 58 106 L65 103 Q60 76 52 58 Z" fill="#3c110c"/>
+
+  <!-- ground trim + metal studs -->
+  <path d="M14 88 L58 106 L102 88" stroke="#241407" stroke-width="3" fill="none"/>
+  <g fill="url(#metal)">
+    <circle cx="30" cy="95" r="1.8"/><circle cx="44" cy="101" r="1.8"/>
+    <circle cx="72" cy="101" r="1.8"/><circle cx="86" cy="95" r="1.8"/>
+  </g>
+
+  <!-- central ridge pole + finial -->
+  <line x1="58" y1="13" x2="58" y2="30" stroke="url(#wood)" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="58" cy="14" r="3.6" fill="url(#metal)"/>
+  <path d="M58 14 L76 11 L67 21 Z" fill="#8f3427"/>
+  <path d="M58 14 L76 11 L67 16 Z" fill="#b04934" opacity=".7"/>
+</svg>
